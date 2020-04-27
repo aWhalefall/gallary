@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
+[![](https://jitpack.io/v/aWhalefall/gallary.svg)](https://jitpack.io/#aWhalefall/gallary)
 
 ![image](https://github.com/aWhalefall/gallary/tree/master/app/src/main/res/mipmap-hdpi/1.png)
 ![image](https://github.com/aWhalefall/gallary/tree/master/app/src/main/res/mipmap-hdpi/2.png)
