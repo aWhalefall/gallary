@@ -10,7 +10,8 @@
 快速引用
 
 1. dd it in your root build.gradle at the end of repositories
-allprojects {
+
+   allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
@@ -20,7 +21,7 @@ allprojects {
 
 Step 2. Add the dependency
 
-dependencies {
+  dependencies {
 	        implementation 'com.github.aWhalefall:gallary:Tag'
 	}
 
