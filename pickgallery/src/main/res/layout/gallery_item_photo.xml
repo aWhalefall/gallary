@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tseng.pickgallery.widget.GalleryImageView
+        android:id="@+id/ivGalleryPhotoImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0.5dp"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@mipmap/gallery_pick_photo" />
+
+    <View
+        android:id="@+id/vGalleryPhotoMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0.5dp"
+        android:scaleType="centerInside"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:layout_width="40dp"
+        android:id="@+id/chkGalleryPhotoSelector"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:layout_gravity="right"
+        android:button="@null"
+        android:clickable="false"
+        android:contentDescription="@null" />
+
+
+</FrameLayout>

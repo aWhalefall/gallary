@@ -1,0 +1,159 @@
+ext.deps = [:]
+
+def versions = [:]
+
+versions.lifecycle = "2.0.0"
+versions.gsonVersion = '2.7'
+versions.retrofit2Version = '2.3.0'
+versions.annotationsVersion = '27.1.0'
+versions.cardViewVersion = '1.0.0'
+versions.glideVersion = '4.9.0'
+versions.okHttpVersion = '3.8.1'
+versions.eventbusAnnotationProcessorVersion = '3.0.1'
+versions.imagepickerVersion = '0.3.2'
+versions.volleyVersion = '1.0.0'
+versions.rxjavaVersion = '1.3.0'
+versions.supportcoreuiVersion = "1.0.0"
+versions.packerVersion = "2.0.0"
+versions.debugdbVersion = "1.0.0"
+versions.constraintVersion = "1.1.3"
+versions.designViewVersion = "27.1.0"
+versions.gsonVersion = '2.6.2'
+versions.supportv7Version = '1.0.0'
+versions.recyclerViewV7Version = '1.0.0'
+versions.ConverterGsonVersion = '2.3.0'
+versions.adapterRxjavaVersion = '2.3.0'
+versions.rxAndroidVersion = '2.0.1'
+versions.rxpermissionsVersion = '0.9.4'
+versions.greendaoVersion = '3.2.0'
+versions.debugDbVersion = '1.0.0'
+versions.eventbusVersion = '3.0.0'
+versions.okHttpVersion = '3.8.1'
+versions.easyPermissionsVersion = '1.0.1'
+versions.indicatorviewVersion = '1.0.0'
+versions.mutidexVersion = '2.0.0'
+versions.jodoVersion = '2.9.4'
+versions.commonscodec = '1.10'
+
+versions.retrofit2Version = '2.3.0'
+versions.eventbusAnnotationProcessorVersion = '3.0.1'
+versions.PhotoViewVersion = '1.2.4'
+//图片选择器，裁剪依赖版本
+versions.ucropVersion = '2.2.0'
+
+versions.smartRefreshVersion = '1.1.0-alpha-30'
+versions.okhttp3LoggingVersion= '3.9.0'
+versions.arouterApiVersion = '1.3.1'
+
+//Testing
+versions.robolectricVersion = '3.0'
+versions.jUnitVersion = '4.12'
+versions.mockitoCoreVersion = '2.8.47'
+versions.mockitoAndroidVersion = '2.8.47'
+versions.espressoVersion = '2.2.2'
+//Development
+versions.leakcanaryAndroidVersion = '1.5.1'
+
+def deps = [:]
+
+def locojoyDependencies = [:]
+locojoyDependencies.eventbus = "org.greenrobot:eventbus:$versions.eventbusVersion"
+locojoyDependencies.gson = "com.google.code.gson:gson:$versions.gsonVersion"
+locojoyDependencies.eventbusannotation = "org.greenrobot:eventbus-annotation-processor:$versions.eventbusAnnotationProcessorVersion"
+locojoyDependencies.supportv7 = "androidx.appcompat:appcompat:$versions.supportv7Version"
+locojoyDependencies.annotations = "com.android.support:support-annotations:$versions.annotationsVersion"
+locojoyDependencies.cardview = "androidx.cardview:cardview:$versions.cardViewVersion"
+locojoyDependencies.design = 'com.google.android.material:material:1.0.0'
+locojoyDependencies.recyclerview = "androidx.recyclerview:recyclerview:$versions.recyclerViewV7Version"
+locojoyDependencies.glide = "com.github.bumptech.glide:glide:$versions.glideVersion"
+locojoyDependencies.imagepicker = "com.lzy.widget:imagepicker:$versions.imagepickerVersion"
+locojoyDependencies.volley = "com.android.volley:volley:$versions.volleyVersion"
+locojoyDependencies.rxjava = "io.reactivex:rxjava:$versions.rxjavaVersion"
+locojoyDependencies.pkng = "com.mcxiaoke.packer-ng:helper:$versions.packerVersion"
+locojoyDependencies.greendao = "org.greenrobot:greendao:$versions.greendaoVersion"
+locojoyDependencies.debugdb = "com.amitshekhar.android:debug-db:$versions.debugdbVersion"
+locojoyDependencies.constraint = 'androidx.constraintlayout:constraintlayout:1.1.3'
+locojoyDependencies.easyPermissions = "pub.devrel:easypermissions:$versions.easyPermissionsVersion"
+locojoyDependencies.indicatorview = "cn.junhua.android.view:indicatorviewlibrary:$versions.indicatorviewVersion"
+locojoyDependencies.mutidex = "androidx.multidex:multidex:$versions.mutidexVersion"
+locojoyDependencies.joda = "joda-time:joda-time:$versions.jodoVersion"
+locojoyDependencies.ucrop = "com.yalantis:ucrop:$versions.ucropVersion"
+
+//core库使用依赖
+locojoyDependencies.smartRefresh = "com.scwang.smartrefresh:SmartRefreshLayout:$versions.smartRefreshVersion"
+locojoyDependencies.okhttp3Logging = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp3LoggingVersion"
+locojoyDependencies.arouterApi = "com.alibaba:arouter-api:$versions.arouterApiVersion"
+
+
+
+deps.locojoyDependencies = locojoyDependencies
+
+def frameDependencies = [:]
+frameDependencies.supportV7 = "androidx.appcompat:appcompat:$versions.supportv7Version"
+frameDependencies.recyclerview = "androidx.recyclerview:recyclerview:$versions.recyclerViewV7Version"
+frameDependencies.glide = "com.github.bumptech.glide:glide:$versions.glideVersion"
+frameDependencies.okhttp = "com.squareup.okhttp3:okhttp:$versions.okHttpVersion"
+frameDependencies.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit2Version"
+frameDependencies.convertergson = "com.squareup.retrofit2:converter-gson:$versions.ConverterGsonVersion"
+frameDependencies.adapterrxjava = "com.squareup.retrofit2:adapter-rxjava2:$versions.adapterRxjavaVersion"
+frameDependencies.rxandroid = "io.reactivex.rxjava2:rxandroid:$versions.rxAndroidVersion"
+frameDependencies.rxpermissions = "com.tbruyelle.rxpermissions:rxpermissions:$versions.rxpermissionsVersion"
+frameDependencies.commonsCodec = "commons-codec:commons-codec:$versions.commonscodec"
+deps.frameDependencies = frameDependencies
+
+def frameTestDependencies = [:]
+
+frameTestDependencies.junit4 = "junit:junit:$versions.jUnitVersion"
+frameTestDependencies.espresso = "com.android.support.test.espresso:espresso-core:$versions.espressoVersion"
+deps.frameTestDependencies = frameTestDependencies
+
+
+def locojoyTestDependencies = [:]
+locojoyTestDependencies.mockitoandroid = "org.mockito:mockito-android:$versions.mockitoAndroidVersion"
+locojoyTestDependencies.mockitocore = "org.mockito:mockito-core:$versions.mockitoCoreVersion"
+locojoyTestDependencies.junit4 = "junit:junit:$versions.jUnitVersion"
+locojoyTestDependencies.espresso = "com.android.support.test.espresso:espresso-core:$versions.espressoVersion"
+deps.nuoyuanTestDependencies = locojoyTestDependencies
+
+def developmentDependencies = [:]
+developmentDependencies.leakCanary = "com.squareup.leakcanary:leakcanary-android:$versions.leakcanaryAndroidVersion"
+deps.developmentDependencies = developmentDependencies
+
+def commonMotionDependencies = [:]
+commonMotionDependencies.supportcoreui = "androidx.legacy:legacy-support-core-ui:$versions.supportcoreuiVersion"
+deps.commonMotionDependencies = commonMotionDependencies
+
+
+def recyclerviewDependencies = [:]
+developmentDependencies.supportV7 = "androidx.appcompat:appcompat:$versions.supportv7Version"
+developmentDependencies.recyclerview = "androidx.recyclerview:recyclerview:$versions.recyclerViewV7Version"
+deps.recyclerviewDependencies = recyclerviewDependencies
+
+def lifecycle = [:]
+lifecycle.runtime = "androidx.lifecycle:lifecycle-runtime:$versions.lifecycle"
+lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+lifecycle.java8 = "android.arch.lifecycle:common-java8:$versions.lifecycle"
+lifecycle.compiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle"
+
+
+deps.lifecycle = lifecycle
+
+def build_versions = [:]
+build_versions.min_sdk = 21
+build_versions.target_sdk = 29
+build_versions.build_tools = "29.0.3"
+ext.build_versions = build_versions
+ext.deps = deps
+
+
+def addRepos(RepositoryHandler handler) {
+    handler.maven {
+        url "http://maven.aliyun.com/nexus/content/groups/public/"
+    }
+    handler.maven { url 'https://dl.bintray.com/umsdk/release' }
+    handler.google()
+   handler.jcenter()
+    handler.maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
+ext.addRepos = this.&addRepos
