@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
 [![](https://jitpack.io/v/aWhalefall/gallary.svg)](https://jitpack.io/#aWhalefall/gallary)
 
-![image](https://github.com/aWhalefall/gallary/tree/master/app/src/main/res/mipmap-hdpi/1.png)
-![image](https://github.com/aWhalefall/gallary/tree/master/app/src/main/res/mipmap-hdpi/2.png)
-![image](https://github.com/aWhalefall/gallary/tree/master/app/src/main/res/mipmap-hdpi/3.png)
-![image](https://github.com/aWhalefall/gallary/tree/master/app/src/main/res/mipmap-hdpi/4.png)
+![拍照](https://user-images.githubusercontent.com/7346792/80484807-e9400300-898a-11ea-80b2-3311d25cbf24.png)
+![照片集](https://user-images.githubusercontent.com/7346792/80484832-f3620180-898a-11ea-82b8-11db816b4f9a.png)
+![相片列表](https://user-images.githubusercontent.com/7346792/80484836-f52bc500-898a-11ea-93a5-a0fda18353ed.png)
+![选中效果](https://user-images.githubusercontent.com/7346792/80484841-f6f58880-898a-11ea-9049-c47b7cb892b3.png)
