@@ -22,7 +22,8 @@
 Step 2. Add the dependency
 
   dependencies {
-	        implementation 'com.github.aWhalefall:gallary:Tag'
+	        implementation 'com.github.aWhalefall:gallary:v1.0'
+		
 	}
 
 
