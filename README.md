@@ -22,9 +22,7 @@
 Step 2. Add the dependency
 
   dependencies {
-	        implementation 'com.github.aWhalefall:gallary:v1.0'
-		
-	}
+	        implementation 'com.github.aWhalefall:gallary:v1.0'}
 
 
 
