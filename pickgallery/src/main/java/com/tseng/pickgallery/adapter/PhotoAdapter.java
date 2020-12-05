@@ -95,9 +95,13 @@ public class PhotoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         final PhotoInfo photoInfo = galleryConfig.isShowCamera() ? photoInfoList.get(position - 1) : photoInfoList.get(position);
         final ViewHolder viewHolder = (ViewHolder) holder;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && photoInfo.uri != null) {
-            galleryConfig.getImageLoader().displayImage(mActivity, mContext, photoInfo.uri, viewHolder.ivPhotoImage, ScreenUtils.getScreenWidth(mContext) / 3, ScreenUtils.getScreenWidth(mContext) / 3);
+            galleryConfig.getImageLoader().displayImage(mActivity, mContext, photoInfo.uri, viewHolder.ivPhotoImage,
+                    ScreenUtils.getScreenWidth(mContext) / defaultColumns,
+                    ScreenUtils.getScreenWidth(mContext) / defaultColumns);
         } else {
-            galleryConfig.getImageLoader().displayImage(mActivity, mContext, photoInfo.path, viewHolder.ivPhotoImage, ScreenUtils.getScreenWidth(mContext) / 3, ScreenUtils.getScreenWidth(mContext) / 3);
+            galleryConfig.getImageLoader().displayImage(mActivity, mContext, photoInfo.path, viewHolder.ivPhotoImage,
+                    ScreenUtils.getScreenWidth(mContext) / defaultColumns,
+                    ScreenUtils.getScreenWidth(mContext) / defaultColumns);
         }
 
         if (LAYOUT_TYPE == 0) {

@@ -104,6 +104,7 @@ public class GalleryPickActivity extends BaseActivity implements View.OnClickLis
             activityBack();
             return;
         }
+        defaultColumns=galleryConfig.getDefaultColumns();
         mHandlerCallBack = galleryConfig.getIHandlerCallBack();
         if (mHandlerCallBack != null)
             mHandlerCallBack.onStart();

@@ -26,7 +26,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    GalleryConfig config;
+    GalleryConfig.Builder builder;
     private TextView text;
 
     @Override
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         Glide.init(this, new GlideBuilder());
         initListenter();
-        config = new GalleryConfig.Builder()
+        builder = new GalleryConfig.Builder()
                 .imageLoader(new GlideImageLoader())    // ImageLoader 加载框架（必填）
                 .iHandlerCallBack(iHandlerCallBack)     // 监听接口（必填）
                 .provider("com.whalefail.gallary.fileProvider")   // provider (必填)
@@ -49,26 +49,31 @@ public class MainActivity extends AppCompatActivity {
                 .isShowCamera(true)                     // 是否显示相机按钮  默认：false
                 .filePath("/Gallery/Pictures")          // 图片存放路径
                 .layoutStyle(0) // 0 显示多选样式 1 显示数字样式
-                .setDisplayCol(3)  //默认显示列数
-                .build();
+                .setDisplayCol(3);  //默认显示列数
+
     }
 
     IHandlerCallBack iHandlerCallBack = new SimpleHandlerCallBack() {
 
         @Override
         public void onSuccess(List<String> photoList) {
-            text.setText("");
-            //返回选择图片路径  Android Q 以上包含Android   Q 返回的是 Uri
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i < photoList.size(); i++) {
-                stringBuilder.append(photoList.get(i)).append("\n");
-            }
-            text.setText(stringBuilder.toString());
+//            text.setText("");
+//            //返回选择图片路径  Android Q 以上包含Android   Q 返回的是 Uri
+//            StringBuilder stringBuilder = new StringBuilder();
+//            for (int i = 0; i < photoList.size(); i++) {
+//                stringBuilder.append(photoList.get(i)).append("\n");
+//            }
+//            text.setText(stringBuilder.toString());
         }
 
         @Override
-        public void onBoSuccess(List<PhotoInfo> list) {
-            // FIXME: 2020/12/5 增加新的回调入口
+        public void onBoSuccess(List<PhotoInfo> photoList) {
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < photoList.size(); i++) {
+                PhotoInfo photoInfo = photoList.get(i);
+                stringBuilder.append("路径 =" + photoInfo.path + "\n width=" + photoInfo.with + " height=" + photoInfo.height).append("\n");
+            }
+            text.setText(stringBuilder.toString());
         }
 
     };
@@ -78,6 +83,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void selectPhoto(View view) {
-        GalleryPick.getInstance().setGalleryConfig(config).open(this);
+        builder.layoutStyle(0).setDisplayCol(3);
+        GalleryPick.getInstance().setGalleryConfig(builder.build()).open(this);
+    }
+
+    public void selectPhoto1(View view) {
+        builder.layoutStyle(1).setDisplayCol(4);
+        GalleryPick.getInstance().setGalleryConfig(builder.build()).open(this);
     }
 }
