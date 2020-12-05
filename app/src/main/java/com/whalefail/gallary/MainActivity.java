@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 .iHandlerCallBack(iHandlerCallBack)     // 监听接口（必填）
                 .provider("com.whalefail.gallary.fileProvider")   // provider (必填)
                 .pathList(new ArrayList<String>())                 // 记录已选的图片
-                .multiSelect(true, 1) // 是否多选   默认：false
+                .multiSelect(true, 3) // 是否多选   默认：false
                 .crop(true)                      // 快捷开启裁剪功能，仅当单选 或直接开启相机时有效
                 .crop(true, 1, 1, 500, 500)             // 配置裁剪功能的参数，   默认裁剪比例 1:1
                 .isShowCamera(true)                     // 是否显示相机按钮  默认：false
