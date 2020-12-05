@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:background="@color/gallery_text_gray">
+    android:background="@color/gallery_topbar_bg">
 
     <LinearLayout
-        android:id="@+id/btnGalleryPickBack"
+        android:id="@+id/btn_selected_confirm"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:gravity="center">
@@ -19,7 +19,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tvGalleryFolder"
+        android:id="@+id/txt_other_folder"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
@@ -31,7 +31,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/tvFinish"
+        android:id="@+id/txt_back"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"

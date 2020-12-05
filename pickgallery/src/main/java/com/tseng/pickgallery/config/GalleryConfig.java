@@ -9,10 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * author= awhalefail
- * creatTime=2020/4/23
- * descript=
+ * Author: yangweichao
+ * Date:   2020/12/5 7:48 PM
+ * Description: 配置
  */
+
+
 public class GalleryConfig {
 
     private ImageLoader imageLoader;    // 图片加载器
@@ -31,6 +33,8 @@ public class GalleryConfig {
     private float aspectRatioY;             // 裁剪比         默认   1：1
     private int maxWidth;                   // 最大的裁剪值   默认    500
     private int maxHeight;                  // 最大的裁剪值   默认    500
+    private int layoutType = 0;             //   默认 1 多选.  0 数字样式
+    private int defaultColumns = 3;             //   默认 1 多选.  0 数字样式
 
     private Builder builder;
 
@@ -54,6 +58,8 @@ public class GalleryConfig {
         this.maxWidth = builder.maxWidth;
         this.maxHeight = builder.maxHeight;
         this.provider = builder.provider;
+        this.layoutType = builder.num_layout;
+        this.defaultColumns=builder.displayCol;
         this.builder = builder;
     }
 
@@ -74,6 +80,8 @@ public class GalleryConfig {
         private float aspectRatioY = 1;
         private int maxWidth = 500;
         private int maxHeight = 500;
+        private int num_layout = 0;
+        private int displayCol = 3;
 
         private String provider;
 
@@ -112,8 +120,18 @@ public class GalleryConfig {
         }
 
 
+        public Builder setDisplayCol(int displayCol) {
+            this.displayCol = displayCol;
+            return this;
+        }
+
         public Builder multiSelect(boolean multiSelect) {
             this.multiSelect = multiSelect;
+            return this;
+        }
+
+        public Builder layoutStyle(int layoutType) {
+            this.num_layout = layoutType;
             return this;
         }
 
@@ -195,6 +213,14 @@ public class GalleryConfig {
 
     public boolean isOpenCamera() {
         return isOpenCamera;
+    }
+
+    public int getLayoutType() {
+        return layoutType;
+    }
+
+    public int getDefaultColumns() {
+        return defaultColumns;
     }
 
     public int getMaxHeight() {

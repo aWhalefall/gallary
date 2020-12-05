@@ -1,18 +1,25 @@
 package com.tseng.pickgallery.inter;
 
+import com.tseng.pickgallery.bean.PhotoInfo;
+
 import java.util.List;
 
 /**
-* author= awhalefail
-* creatTime=2020/4/27
-* descript=IHandlerCallBack
-*/
+ * IHandlerCallBack
+ * Created by Yancy on 2016/10/26.
+ */
 
 public interface IHandlerCallBack {
 
     void onStart();
 
     void onSuccess(List<String> photoList);
+
+    /**
+     * 回到原始数据
+     * @param list
+     */
+    void onBoSuccess(List<PhotoInfo> list);
 
     void onCancel();
 

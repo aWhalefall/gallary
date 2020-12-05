@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tseng.pickgallery.widget.GalleryImageView
+        android:id="@+id/ivGalleryPhotoImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0.5dp"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@mipmap/gallery_pick_photo" />
+
+    <View
+        android:id="@+id/vGalleryPhotoMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0.5dp"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+
+
+    <CheckBox
+        android:id="@+id/chkGalleryPhotoSelector"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:button="@null"
+        android:clickable="false"
+        android:contentDescription="@null"
+        android:padding="10dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bule_round10"
+        android:gravity="center"
+        android:text="9"
+        android:textColor="#ffffff"
+        android:textSize="13sp" />
+
+
+</RelativeLayout>

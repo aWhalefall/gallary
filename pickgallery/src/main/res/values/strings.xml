@@ -9,4 +9,10 @@
     <string name="gallery_folder_name">文件夹名</string>
     <string name="gallery_photo_num">%d 张</string>
 
+    <!--    权限-->
+    <string name="alert_title">提示</string>
+    <string name="alert_content">"请点击"确定"以允许访问 若不允许,您将无法上传本地相册图片内容"</string>
+    <string name="confirm_btn">确定</string>
+    <string name="cancel_btn">取消</string>
+    <string name="alert_content1">""</string>
 </resources>

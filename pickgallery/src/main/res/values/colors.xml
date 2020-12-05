@@ -11,6 +11,8 @@
     <color name="gallery_separation">#FFDCDCDC</color>
     <!--灰色字体-->
     <color name="gallery_text_gray">#FF999999</color>
+    <!--topbar-->
+    <color name="gallery_topbar_bg">#3700B3</color>
     <!--字体颜色-->
     <color name="gallery_text_black">#FF333333</color>
     <color name="gallery_folder_bg">#88FFFFFF</color>
